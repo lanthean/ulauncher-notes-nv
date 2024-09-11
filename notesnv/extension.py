@@ -154,7 +154,7 @@ class NotesNv:
                 name=match.filename,
                 description=match.match_summary,
                 on_enter=callable_action(
-                    self.open_note, os.path.join(self.get_notes_path(), match.filename)
+                    self.open_note, match.filename
                 ),
                 on_alt_enter=callable_action(self.list_commands, match.filename),
             )
